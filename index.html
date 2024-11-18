@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Black & White Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Skincare Assistant</h1>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Skincare Simplified</h2>
+            <p>We provide skincare brand AI a better way to navigate their customer to buy what they need, not what they see.</p>
+        </div>
+    </section>
+
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "acfea421-c1df-4382-a785-4faf5ea9b625", // The ID of this integration.
+          region: "jp-tok", // The region your integration is hosted in.
+          serviceInstanceID: "907255f4-8ecc-4b16-b751-d0c91c605273", // The ID of your service instance.
+          onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+
+    <section class="product" id="product">
+       <div class="hero-content"> <h2>Try Our Product</h2></div>
+       <div class="hero-content">
+        <p>Experience the future of technology with our product.</p>
+        <p>Click the button on the down left to expericence first hand.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Company Name. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
